@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Student Registration Details</h1>
+<!-- <h1>{{Application_No}}</h1>
+<h1>{{Name}}</h1>
+<h1>{{DOB}}</h1>
+<h1>{{Age}}</h1>
+<h1>{{Gender}}</h1>
+<h1>{{Mobile_Number}}</h1>
+<h1>{{Address}}</h1> -->
+<table style="width:100%" border="1px solid black">
+    
+    <tr>
+      <th>Application No</th>
+      <th>Name</th>
+      <th>Date of Birth</th>
+      <th>Age</th>
+      <th>Gender</th>
+      <th>Mobile Number</th>
+      <th>Address</th>
+    </tr>
+    {% for data in all%}
+    <tr>
+       
+      <td>{{data.Application_No}}</td>
+      <td>{{data.Name}}</td>
+      <td>{{data.DOB}}</td>
+      <td>{{data.Age}}</td>
+      <td>{{data.Gender}}</td>
+      <td>{{data.Mobile_Number}}</td>
+      <td>{{data.Address}}</td>
+      
+    </tr>
+    {% endfor%} 
+  </table>
+
+
+{% endblock %}
+
+
